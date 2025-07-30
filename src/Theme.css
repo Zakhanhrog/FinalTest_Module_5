@@ -1,0 +1,135 @@
+:root {
+  --font-family-sans-serif: 'Inter', sans-serif;
+  --background-color: #f4f7f9;
+  --card-background-color: #ffffff;
+  --text-color: #212529;
+  --text-muted-color: #6c757d;
+  --border-color: #e9ecef;
+  --primary-color: #0d6efd;
+  --primary-hover-color: #0b5ed7;
+  --primary-rgb: 13, 110, 253;
+}
+
+body {
+  font-family: var(--font-family-sans-serif);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page-title {
+  font-weight: 700;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 1rem !important;
+}
+
+.page-subtitle {
+  text-align: center;
+  color: var(--text-muted-color);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.custom-card {
+  background-color: var(--card-background-color);
+  border: none;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-control, .form-select {
+  border-color: #ced4da;
+  transition: none;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.95rem;
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.1rem rgba(var(--primary-rgb), 0.25);
+}
+
+.table {
+  background-color: var(--card-background-color);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.table thead th {
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-muted-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  padding: 0.9rem 1rem;
+}
+
+.table tbody td {
+  vertical-align: middle;
+  color: var(--text-color);
+  padding: 0.9rem 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(var(--primary-rgb), 0.04);
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.3rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover-color) !important;
+  border-color: var(--primary-hover-color) !important;
+}
+
+.btn-secondary-outline {
+  font-weight: 500;
+  background-color: transparent;
+  color: var(--text-muted-color);
+  border: 1px solid #ced4da;
+  transition: all 0.15s ease-in-out;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.3rem;
+}
+
+.btn-secondary-outline:hover {
+  background-color: #f8f9fa;
+  border-color: #adb5bd;
+  color: var(--text-color);
+}
+
+.action-button {
+  background-color: #eef2ff;
+  color: #4338ca;
+  border: none;
+  font-weight: 500;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px; /* Tạo nút hình con nhộng */
+  transition: all 0.15s ease-in-out;
+}
+.action-button:hover {
+  background-color: #c7d2fe;
+  color: #3730a3;
+}

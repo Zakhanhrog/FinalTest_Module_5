@@ -1,0 +1,238 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "ten_san_pham": "Áo Thun Nam Cotton Cao Cấp",
+      "ngay_nhap": "2024-05-20",
+      "gia_ban": 280000,
+      "so_luong": 150,
+      "loai_san_pham_id": 1
+    },
+    {
+      "id": "2",
+      "ten_san_pham": "Quần Jean Nữ Skinny Rách Gối",
+      "ngay_nhap": "2024-04-11",
+      "gia_ban": 450000,
+      "so_luong": 883,
+      "loai_san_pham_id": 2
+    },
+    {
+      "id": "3",
+      "ten_san_pham": "Váy Hoa Mùa Hè Dáng Dài",
+      "ngay_nhap": "2024-06-01",
+      "gia_ban": 550000,
+      "so_luong": 120,
+      "loai_san_pham_id": 3
+    },
+    {
+      "id": "4",
+      "ten_san_pham": "Áo Sơ Mi Nữ Lụa Satin",
+      "ngay_nhap": "2024-07-15",
+      "gia_ban": 390000,
+      "so_luong": 45,
+      "loai_san_pham_id": 4
+    },
+    {
+      "id": "5",
+      "ten_san_pham": "Quần Kaki Nam Form Slimfit",
+      "ngay_nhap": "2024-03-02",
+      "gia_ban": 420000,
+      "so_luong": 210,
+      "loai_san_pham_id": 5
+    },
+    {
+      "id": "6",
+      "ten_san_pham": "Áo Khoác Dù Chống Nắng Unisex",
+      "ngay_nhap": "2024-02-18",
+      "gia_ban": 350000,
+      "so_luong": 300,
+      "loai_san_pham_id": 6
+    },
+    {
+      "id": "7",
+      "ten_san_pham": "Mũ Lưỡi Trai Thêu Logo",
+      "ngay_nhap": "2023-12-25",
+      "gia_ban": 150000,
+      "so_luong": 500,
+      "loai_san_pham_id": 7
+    },
+    {
+      "id": "8",
+      "ten_san_pham": "Bộ Đồ Bé Trai In Hình Siêu Nhân",
+      "ngay_nhap": "2024-07-05",
+      "gia_ban": 220000,
+      "so_luong": 75,
+      "loai_san_pham_id": 8
+    },
+    {
+      "id": "9",
+      "ten_san_pham": "Áo Polo Nam Vải Cá Sấu",
+      "ngay_nhap": "2024-06-22",
+      "gia_ban": 320000,
+      "so_luong": 180,
+      "loai_san_pham_id": 1
+    },
+    {
+      "id": "10",
+      "ten_san_pham": "Quần Short Nữ Lưng Cao",
+      "ngay_nhap": "2024-05-10",
+      "gia_ban": 280000,
+      "so_luong": 95,
+      "loai_san_pham_id": 2
+    },
+    {
+      "id": "11",
+      "ten_san_pham": "Đầm Dự Tiệc Cúp Ngực Sang Trọng",
+      "ngay_nhap": "2024-01-15",
+      "gia_ban": 890000,
+      "so_luong": 30,
+      "loai_san_pham_id": 3
+    },
+    {
+      "id": "12",
+      "ten_san_pham": "Áo Croptop Nữ Tay Phồng",
+      "ngay_nhap": "2024-07-01",
+      "gia_ban": 230000,
+      "so_luong": 110,
+      "loai_san_pham_id": 4
+    },
+    {
+      "id": "13",
+      "ten_san_pham": "Quần Jogger Nam Thun Nỉ",
+      "ngay_nhap": "2023-11-30",
+      "gia_ban": 380000,
+      "so_luong": 140,
+      "loai_san_pham_id": 5
+    },
+    {
+      "id": "14",
+      "ten_san_pham": "Áo Khoác Jean Nam Denim Bụi Bặm",
+      "ngay_nhap": "2024-03-25",
+      "gia_ban": 650000,
+      "so_luong": 65,
+      "loai_san_pham_id": 6
+    },
+    {
+      "id": "15",
+      "ten_san_pham": "Thắt Lưng Da Bò Thật",
+      "ngay_nhap": "2023-10-10",
+      "gia_ban": 480000,
+      "so_luong": 85,
+      "loai_san_pham_id": 7
+    },
+    {
+      "id": "16",
+      "ten_san_pham": "Váy Công Chúa Cho Bé Gái",
+      "ngay_nhap": "2024-06-15",
+      "gia_ban": 450000,
+      "so_luong": 55,
+      "loai_san_pham_id": 8
+    },
+    {
+      "id": "17",
+      "ten_san_pham": "Áo Thun Nam In Chữ Lớn",
+      "ngay_nhap": "2024-04-01",
+      "gia_ban": 250000,
+      "so_luong": 250,
+      "loai_san_pham_id": 1
+    },
+    {
+      "id": "18",
+      "ten_san_pham": "Quần Legging Nữ Tập Gym",
+      "ngay_nhap": "2024-07-20",
+      "gia_ban": 290000,
+      "so_luong": 125,
+      "loai_san_pham_id": 2
+    },
+    {
+      "id": "19",
+      "ten_san_pham": "Đầm Body Nữ Xẻ Tà",
+      "ngay_nhap": "2024-05-05",
+      "gia_ban": 620000,
+      "so_luong": 40,
+      "loai_san_pham_id": 3
+    },
+    {
+      "id": "20",
+      "ten_san_pham": "Áo Thun Nữ Oversize",
+      "ngay_nhap": "2024-02-01",
+      "gia_ban": 260000,
+      "so_luong": 190,
+      "loai_san_pham_id": 4
+    },
+    {
+      "id": "21",
+      "ten_san_pham": "Quần Tây Nam Ống Đứng",
+      "ngay_nhap": "2023-09-15",
+      "gia_ban": 550000,
+      "so_luong": 115,
+      "loai_san_pham_id": 5
+    },
+    {
+      "id": "22",
+      "ten_san_pham": "Áo Khoác Phao Siêu Nhẹ",
+      "ngay_nhap": "2023-11-01",
+      "gia_ban": 750000,
+      "so_luong": 90,
+      "loai_san_pham_id": 6
+    },
+    {
+      "id": "23",
+      "ten_san_pham": "Tất Cổ Cao Set 5 Đôi",
+      "ngay_nhap": "2024-01-01",
+      "gia_ban": 120000,
+      "so_luong": 800,
+      "loai_san_pham_id": 7
+    },
+    {
+      "id": "24",
+      "ten_san_pham": "Áo Ba Lỗ Nam Thể Thao",
+      "ngay_nhap": "2024-06-30",
+      "gia_ban": 180000,
+      "so_luong": 220,
+      "loai_san_pham_id": 1
+    },
+    {
+      "id": "25",
+      "ten_san_pham": "Chân Váy Jean Nữ Chữ A",
+      "ngay_nhap": "2024-04-20",
+      "gia_ban": 320000,
+      "so_luong": 130,
+      "loai_san_pham_id": 2
+    }
+  ],
+  "productTypes": [
+    {
+      "id": "1",
+      "ten_loai": "Áo Nam"
+    },
+    {
+      "id": "2",
+      "ten_loai": "Quần Nữ"
+    },
+    {
+      "id": "3",
+      "ten_loai": "Váy Đầm"
+    },
+    {
+      "id": "4",
+      "ten_loai": "Áo Nữ"
+    },
+    {
+      "id": "5",
+      "ten_loai": "Quần Nam"
+    },
+    {
+      "id": "6",
+      "ten_loai": "Áo Khoác"
+    },
+    {
+      "id": "7",
+      "ten_loai": "Phụ Kiện"
+    },
+    {
+      "id": "8",
+      "ten_loai": "Đồ Trẻ Em"
+    }
+  ]
+}
