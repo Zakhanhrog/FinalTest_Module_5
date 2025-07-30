@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import ProductList from './components/ProductList';
 import ProductUpdate from './components/ProductUpdate';
+import ProductAdd from './components/ProductAdd';
 import { ToastContainer } from 'react-toastify';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Routes>
           <Route path="/" element={<ProductList />} />
+          <Route path="/add" element={<ProductAdd />} />
           <Route path="/update/:productId" element={<ProductUpdate />} />
         </Routes>
       </main>
