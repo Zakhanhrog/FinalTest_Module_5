@@ -37,14 +37,19 @@ function ProductList() {
 
   const processedProducts = useMemo(() => {
     let results = [...allProducts];
-    if (searchTerm.trim()) results = results.filter(p => p.ten_san_pham.toLowerCase().includes(searchTerm.trim().toLowerCase()));
-    if (selectedType) results = results.filter(p => p.loai_san_pham_id === parseInt(selectedType));
-    if (results.length === 0 && (searchTerm.trim() || selectedType)) toast.info("Không tìm thấy sản phẩm nào phù hợp.");
+    if (searchTerm.trim()) {
+      results = results.filter(p => p.ten_san_pham.toLowerCase().includes(searchTerm.trim().toLowerCase()));
+    }
+    if (selectedType) {
+      results = results.filter(p => p.loai_san_pham_id === parseInt(selectedType));
+    }
     results.sort((a, b) => sortOrder === 'asc' ? a.so_luong - b.so_luong : b.so_luong - a.so_luong);
     return results;
   }, [searchTerm, selectedType, allProducts, sortOrder]);
 
-  useEffect(() => { setCurrentPage(1); }, [searchTerm, selectedType]);
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, selectedType]);
 
   const totalPages = Math.ceil(processedProducts.length / ITEMS_PER_PAGE);
   const currentProducts = processedProducts.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
