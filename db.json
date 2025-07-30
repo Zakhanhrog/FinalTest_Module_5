@@ -57,14 +57,6 @@
       "loai_san_pham_id": 7
     },
     {
-      "id": "8",
-      "ten_san_pham": "Bộ Đồ Bé Trai In Hình Siêu Nhân",
-      "ngay_nhap": "2024-07-05",
-      "gia_ban": 220000,
-      "so_luong": 75,
-      "loai_san_pham_id": 8
-    },
-    {
       "id": "9",
       "ten_san_pham": "Áo Polo Nam Vải Cá Sấu",
       "ngay_nhap": "2024-06-22",
@@ -198,6 +190,14 @@
       "ngay_nhap": "2024-04-20",
       "gia_ban": 320000,
       "so_luong": 130,
+      "loai_san_pham_id": 2
+    },
+    {
+      "id": "5692",
+      "ten_san_pham": "quần dài",
+      "ngay_nhap": "2024-10-23",
+      "gia_ban": 200000000,
+      "so_luong": 200,
       "loai_san_pham_id": 2
     }
   ],

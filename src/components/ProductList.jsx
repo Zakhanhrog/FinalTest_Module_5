@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import api from '../services/api';
 import { format } from 'date-fns';
 import { toast } from 'react-toastify';
+import ConfirmationModal from './ConfirmationModal';
 
 const SortIcon = ({ order }) => <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-slate-500 group-hover:text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>{order === 'asc' ? <path strokeLinecap="round" strokeLinejoin="round" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" /> : <path strokeLinecap="round" strokeLinejoin="round" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />}</svg>;
 const ChevronLeftIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" /></svg>;
@@ -19,6 +20,9 @@ function ProductList() {
   const [sortOrder, setSortOrder] = useState('desc');
   const [currentPage, setCurrentPage] = useState(1);
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [productToDelete, setProductToDelete] = useState(null);
+
   const fetchAllProducts = async () => {
     try {
       const response = await api.getProducts();
@@ -33,9 +37,7 @@ function ProductList() {
       try {
         const response = await api.getProductTypes();
         setProductTypes(response.data);
-      } catch (error) {
-        // Lỗi này không nghiêm trọng bằng lỗi tải sản phẩm nên có thể bỏ qua toast
-      }
+      } catch (error) { /* Ignore */ }
     };
     fetchAllProducts();
     fetchProductTypes();
@@ -56,15 +58,26 @@ function ProductList() {
 
   const handleSortToggle = () => setSortOrder(prev => prev === 'asc' ? 'desc' : 'asc');
 
-  const handleDelete = async (productId, productName) => {
-    if (window.confirm(`Bạn có chắc chắn muốn xoá sản phẩm "${productName}"? Hành động này không thể hoàn tác.`)) {
-      try {
-        await api.deleteProduct(productId);
-        toast.success(`Đã xoá sản phẩm "${productName}" thành công.`);
-        setAllProducts(prevProducts => prevProducts.filter(p => p.id !== productId));
-      } catch (error) {
-        toast.error("Xoá sản phẩm thất bại.");
-      }
+  const openDeleteModal = (product) => {
+    setProductToDelete(product);
+    setIsModalOpen(true);
+  };
+
+  const closeDeleteModal = () => {
+    setProductToDelete(null);
+    setIsModalOpen(false);
+  };
+
+  const confirmDelete = async () => {
+    if (!productToDelete) return;
+    try {
+      await api.deleteProduct(productToDelete.id);
+      toast.success(`Đã xoá sản phẩm "${productToDelete.ten_san_pham}" thành công.`);
+      fetchAllProducts();
+    } catch (error) {
+      toast.error("Xoá sản phẩm thất bại.");
+    } finally {
+      closeDeleteModal();
     }
   };
 
@@ -127,7 +140,7 @@ function ProductList() {
                     <Link to={`/update/${product.id}`} className="text-indigo-600 hover:text-indigo-800 transition-colors duration-150">
                       Cập nhật
                     </Link>
-                    <button onClick={() => handleDelete(product.id, product.ten_san_pham)} className="text-red-600 hover:text-red-800 transition-colors duration-150">
+                    <button onClick={() => openDeleteModal(product)} className="text-red-600 hover:text-red-800 transition-colors duration-150">
                       Xóa
                     </button>
                   </td>
@@ -162,6 +175,18 @@ function ProductList() {
           </button>
         </nav>
       )}
+
+      <ConfirmationModal
+        isOpen={isModalOpen}
+        onClose={closeDeleteModal}
+        onConfirm={confirmDelete}
+        title="Xác nhận xóa sản phẩm"
+        message={
+          <>
+            Bạn có chắc chắn muốn xóa sản phẩm <strong>"{productToDelete?.ten_san_pham}"</strong>? Hành động này không thể hoàn tác.
+          </>
+        }
+      />
     </div>
   );
 }
